@@ -3,25 +3,28 @@ import HomeView from '@/views/HomeView.vue'
 import GameDetail from '@/views/GameDetail.vue'
 import FavoritesPage from '@/views/FavoritesPage.vue'
 
+
+const  routes= [
+  {
+    path: '/',
+    name: 'home',
+    component: HomeView
+  },    
+  {
+    path: '/game/:id',
+    name: 'GameDetail',
+    component: GameDetail,
+    props: true
+  },
+  {
+    path: '/favorites',
+    name: 'Favorite Page',
+    component: FavoritesPage
+  },
+]
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: HomeView
-    },    
-    {
-      path: '/game/:id',
-      name: 'Game Detail',
-      component: GameDetail
-    },
-    {
-      path: '/favorites',
-      name: 'Favorite Page',
-      component: FavoritesPage
-    },
-  ]
+  history: createWebHistory(),
+  routes
 })
 
 export default router

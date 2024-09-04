@@ -7,7 +7,7 @@ import FooTer from '@/components/partials/FooTer.vue'
 
 <template>
   <NavBar/>
-  <div class="container mx-4">
+  <div class="dark:bg-gray-900  ">
     <router-view />
   </div>
   
