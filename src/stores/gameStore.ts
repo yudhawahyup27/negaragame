@@ -84,7 +84,7 @@ export interface GameDetail extends Game {
   description: string;
   released: string;
   rating: number;
-  // Tambahkan properti lain yang diperlukan
+ 
 }
 
 export interface GameStoreState {
@@ -107,7 +107,7 @@ export const useGameStore = defineStore('game', {
   }),
   actions: {
     async fetchGames() {
-      const apiKey = import.meta.env.VITE_RAWG_API_KEY
+      const apiKey = "8012431b99524792b2f8cf943b435a1a"
       let endpoint = `https://api.rawg.io/api/games?key=${apiKey}&page=${this.page}&page_size=${this.pageSize}`;
       if (this.searchQuery) {
         endpoint = `https://api.rawg.io/api/games?search=${this.searchQuery}&key=${apiKey}&page=${this.page}&page_size=${this.pageSize}`;
@@ -121,7 +121,7 @@ export const useGameStore = defineStore('game', {
       this.fetchGames();
     },
     async fetchGameDetail(id: string) {
-      const apiKey = import.meta.env.VITE_RAWG_API_KEY
+     const apiKey = "8012431b99524792b2f8cf943b435a1a"
       const response = await axios.get(`https://api.rawg.io/api/games/${id}?key=${apiKey}`);
       this.gameDetail = response.data as GameDetail;
     },
