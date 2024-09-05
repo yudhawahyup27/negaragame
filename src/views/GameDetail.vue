@@ -1,14 +1,14 @@
 <!-- src/components/GameDetail.vue -->
 <template>
-    <div v-if="gameDetail" class="mx-6 mb-4">
+    <div v-if="gameDetail" class="mx-6 mb-4 text-gray-600 dark:text-white">
       <img
         :src="gameDetail.background_image"
         :alt="gameDetail.name"
         class="p-4 max-w-4xl mb-4 mx-auto rounded-lg dark:bg-white bg-gray-900"
       />
       <h1 class="text-2xl font-bold mb-4">{{ gameDetail.name }}</h1>
-      <p class="text-gray-600">Released: {{ gameDetail.released }}</p>
-      <p class="text-gray-600">Rating: {{ gameDetail.rating }}</p>
+      <p class="text-gray-600 dark:text-white">Released: {{ gameDetail.released }}</p>
+      <p class="text-gray-600 dark:text-white">Rating: {{ gameDetail.rating }}</p>
   
       <h2 class="font-bold mb-2 text-xl">Description</h2>
       <p class="mb-2">{{ gameDetail.description_raw }}</p>
@@ -36,7 +36,7 @@
       </button>
     </div>
     <div v-else class="p-4">
-      <p class="text-gray-600">Loading game data...</p>
+      <p class="text-gray-600 dark:text-white">Loading game data...</p>
     </div>
   </template>
   

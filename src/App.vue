@@ -10,7 +10,7 @@ import NavBar from '@/components/partials/NavBar.vue';
   <NavBar/>
   <div class="dark:bg-gray-900  ">
     <router-view />
+    <FooTer/>
   </div>
   
-<FooTer/>
 </template>
