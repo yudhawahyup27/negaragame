@@ -1,7 +1,8 @@
 <script setup lang="ts">
 
-import NavBar from '@/components/partials/NavBar.vue'
+NavBar
 import FooTer from '@/components/partials/FooTer.vue'
+import NavBar from './components/partials/NavBar.vue';
 
 </script>
 
