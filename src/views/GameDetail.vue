@@ -1,6 +1,6 @@
 <!-- src/components/GameDetail.vue -->
 <template>
-    <div v-if="gameDetail" class="mx-auto mb-4">
+    <div v-if="gameDetail" class="mx-6 mb-4">
       <img
         :src="gameDetail.background_image"
         :alt="gameDetail.name"
@@ -22,7 +22,7 @@
       </ul>
   
       <h2 class="text-lg font-semibold mt-4">Genres</h2>
-      <ul class="list-disc list-inside">
+      <ul class="list-disc list-inside ">
         <li v-for="genre in gameDetail.genres" :key="genre.id">
           {{ genre.name }}
         </li>
