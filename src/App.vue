@@ -2,7 +2,7 @@
 
 NavBar
 import FooTer from '@/components/partials/FooTer.vue'
-import NavBar from './components/partials/NavBar.vue';
+import NavBar from '@/components/partials/NavBar.vue';
 
 </script>
 

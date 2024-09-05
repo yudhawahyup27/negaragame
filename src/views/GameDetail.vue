@@ -73,13 +73,12 @@
   
   const gameDetail = ref<GameDetail | null>(null)
 
-const isFavorite = computed(() => {
+  const isFavorite = computed(() => {
   if (gameDetail.value) {
-    
-    return store.favoriteGames.some((fav) => fav.id === gameDetail.value?.id)
+    return store.favoriteGames.some((fav) => fav.id === gameDetail.value?.id);
   }
-  return false
-})
+  return false;
+});
   const fetchGameDetail = async () => {
     const gameId = route.params.id as string
     await store.fetchGameDetail(parseInt(gameId))
